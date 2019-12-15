@@ -1,0 +1,3 @@
+[submodule "microbit-firmata"]
+	path = microbit-firmata
+	url = https://github.com/cpietsch/microbit-firmata
