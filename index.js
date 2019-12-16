@@ -40,7 +40,7 @@ function displayTotal(mb, number) {
   let i = 0;
   for (let r = 0; r < 5; r++) {
     for (let l = 0; l < 5; l++) {
-      const on = number / 4 < ++i ? 0 : 255;
+      const on = number / 4 <= i++ ? 0 : 255;
       mb.displayPlot(r, l, on);
     }
   }
@@ -50,7 +50,7 @@ function getPercentage() {
   return new Promise((resolve, reject) => {
     cpuStat.usagePercent(
       {
-        sampleMs: 500
+        sampleMs: 250
       },
       function(err, percent, seconds) {
         if (err) {
